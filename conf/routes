@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#
+OPTIONS /list/*id             controllers.Application.options(id: Long)
+# Read a Mitch
+GET     /list/$id<[0-9]+>     controllers.Application.indexList(id: Long)
+# Create a Mitch
+POST    /list                 controllers.Application.saveList
+# Update a Mitch
+PUT     /list/$id<[0-9]+>     controllers.Application.updateList(id: Long)
